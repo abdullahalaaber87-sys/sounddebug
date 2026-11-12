@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "sound-debug-addon",
+  "version": "${version}",
+  "name": "SoundDebug Addon",
+  "description": "Passive client-side sound packet visualizer & 16x16 chunk pillar highlighter for Meteor Client 1.21.11.",
+  "authors": [
+    "SoundDebugDev"
+  ],
+  "contact": {
+    "sources": "https://github.com/MeteorDevelopment/meteor-addon-template"
+  },
+  "icon": "assets/sounddebug/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "meteor": [
+      "com.example.sounddebug.SoundDebugAddon"
+    ]
+  },
+  "mixins": [
+    "sounddebug.mixins.json"
+  ],
+  "custom": {
+    "meteor-client:color": "0,255,100",
+    "modmenu": {
+      "parent": {
+        "id": "meteor-client"
+      }
+    }
+  },
+  "depends": {
+    "java": ">=21",
+    "minecraft": ["${mc_version}", "1.21.11"],
+    "meteor-client": "*"
+  }
+}
